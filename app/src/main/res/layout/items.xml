@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:slideswitch="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/mywaterlogo"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/scrollViewOK"
+        android:layout_width="fill_parent"
+        android:visibility="visible"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:background="#FFFFFF"
+                android:layout_height="30dp">
+
+                <LinearLayout
+                    android:id="@+id/linw"
+                    android:orientation="horizontal"
+                    android:background="#FFFFFF"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="28dp">
+
+                    <TextView
+                        android:id="@+id/textphw"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="fill_parent"
+                        android:background="#00BF86"
+                        android:layout_height="fill_parent"
+                        android:text="温度"
+                        android:textColor="#FFFFFF"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linp"
+                    android:orientation="horizontal"
+                    android:background="#FFFFFF"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/margin_2"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="28dp">
+
+                    <TextView
+                        android:id="@+id/textphp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="fill_parent"
+                        android:background="#FFFFFF"
+                        android:layout_height="fill_parent"
+                        android:text="PH"
+                        android:textColor="#00BF86"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Grop"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/GropPH"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:layout_marginTop="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_15"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <lt.com.water.DoughnutView
+                        android:id="@+id/doughnutView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/pingWd"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#FFFFFF"
+                        android:text="温度：23C"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <lt.com.water.DoughnutView
+                        android:id="@+id/doughnutViewb"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/pingPh"
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#FFFFFF"
+                        android:text="PH：5"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_marginRight="@dimen/margin_15"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="水位"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                    <lt.com.water.SlideSwitch
+                        android:id="@+id/slidswitcha"
+                        android:layout_width="50dp"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        android:layout_marginLeft="5dp"
+                        slideswitch:themeColor="#FFFFFF"
+                        android:layout_height="20dp" />
+
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加热量"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                    <lt.com.water.SlideSwitch
+                        android:id="@+id/slidswitchb"
+                        android:layout_width="50dp"
+                        slideswitch:isOpen="false"
+                        android:layout_marginLeft="5dp"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#FFFFFF"
+                        android:layout_height="20dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="灯光"
+                        android:textColor="#FFFFFF"
+                        android:layout_gravity="center"
+                        android:textSize="@dimen/text_size_14"
+                        />
+
+                    <lt.com.water.SlideSwitch
+                        android:id="@+id/slidswitchc"
+                        android:layout_width="50dp"
+                        android:layout_marginLeft="5dp"
+                        slideswitch:isOpen="false"
+                        slideswitch:shape="circle"
+                        slideswitch:themeColor="#FFFFFF"
+                        android:layout_height="20dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="@dimen/margin_15"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:id="@+id/temers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="-10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:text="2013-12-01"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <TextView
+                    android:id="@+id/mtimers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="-30dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:text="12:12"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+                <TextView
+                    android:id="@+id/timerWeek"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="30dp"
+                    android:textColor="#FFFFFF"
+                    android:text="12:00"
+                    android:textSize="@dimen/text_size_14"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/margin_25"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_gravity="center"
+                    android:layout_height="20dp"
+                    android:src="@drawable/libiaob"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="序列号"
+                    android:textSize="@dimen/text_size_12"
+                    />
+
+                <TextView
+                    android:id="@+id/textXL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="#FFFFFF"
+                    android:text=""
+                    android:textSize="@dimen/text_size_14"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
